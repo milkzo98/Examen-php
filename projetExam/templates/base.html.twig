@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+
+           
+            <!-- Favicons -->
+  <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+       <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-dark">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="">AFRICA EMPLOI</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar"><br><br>
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{ path ('acceuil')}}">Acceuil</a></li>
+          <li class="dropdown"><a href="#"><span>Entreprise</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="#">Se connecter</a></li>
+                  <li><a href="{{ path ('demandeur_index')}}">Liste CV</a></li>
+                </ul>
+          <li class="dropdown"><a href="#"><span>Demandeur D'emploi</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ path ('connexion')}}">Se connecter</a></li>
+              <li class="dropdown"><a href="#"><span>Plus...</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="#">S'INSCRIRE </a></li>
+                  <li><a href="{{ path ('demandeur_new') }}">Deposer CV</a></li>
+                  <li><a href="{{ path ('acceuil')}}">Deconnexion</a></li>
+                  
+                </ul>
+              </li>
+             
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+        {% block body %}{% endblock %}
+        
+       <!-- Vendor JS Files -->
+  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{asset('assets/vendor/purecounter/purecounter.js')}}"></script>
+  <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{asset('assets/js/main.js')}}"></script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demandeur index{% endblock %}
+
+{% block body %}
+<br><br><br><br><br>
+    <h1>Demandeur CV</h1>
+      <div class="container ">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Adresse</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Specialite</th>
+                <th>Niveau</th>
+                <th>Experience</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demandeur in demandeurs %}
+            <tr>
+                <td>{{ demandeur.id }}</td>
+                <td>{{ demandeur.Nom }}</td>
+                <td>{{ demandeur.Prenom }}</td>
+                <td>{{ demandeur.Age }}</td>
+                <td>{{ demandeur.Adresse }}</td>
+                <td>{{ demandeur.Email }}</td>
+                <td>{{ demandeur.Telephone }}</td>
+                <td>{{ demandeur.Specialite }}</td>
+                <td>{{ demandeur.Niveau }}</td>
+                <td>{{ demandeur.Experience }}</td>
+                {# <td>
+                    <button class="w3-button w3-black"> <a href="{{ path('demandeur_edit', {'id': demandeur.id}) }}">Modifier </button></a>
+                </td> #}
+            </tr>
+        {% else %}
+           
+        {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+{% endblock %}

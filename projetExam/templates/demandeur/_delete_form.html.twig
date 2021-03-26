@@ -1,0 +1,10 @@
+<div class="container">
+<div class="main-content">
+<div class="col-md-5  ml-100">
+<form method="post" action="{{ path('demandeur_delete', {'id': demandeur.id}) }}" onsubmit="return confirm('Voulez-vous supprimer ce cv de la liste?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ demandeur.id) }}">
+    <button class="w3-button w3-hover-red">Supprimer</button>
+</form>
+ </div>
+    </div>
+    </div>
